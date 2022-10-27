@@ -1,10 +1,375 @@
-* {
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Helvetica', sans-serif;
     margin: 0;
-    padding: 0;
-    outline: none;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.8em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+
+button{
+    font-size: 4em;
+    font-weight: bold;
+    padding: 40px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: rgb(35, 83, 155);
+    background-color:rgb(240, 250, 255);
+}
+
+button:hover{
+    background-color: rgb(219, 233, 255);
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-puntual{ color:rgb(9, 85, 136); }
+
+header{
+    background-color: rgb(245,245,245);
+    
+}
+
+header .menu {
+    background-color:rgba(56, 116, 165, 0.9);
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(42, 43, 44);
+    box-shadow: 5px 1px 10px rgb(56, 116, 165);
+}
+
+header .logo {
+    color: white;
+    font-size: 35px;
+    padding: 0 80px 0 80px;
+    font-weight: bold;
+    font-family:'Open Sans';
+}
+
+header .menu_items {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+header .menu_items li {
+    border-radius: 3px;
+    margin: 0 5px 0 5px;
+}
+
+header .menu_items li a {
+    padding: 7px 13px 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: white;
+}
+
+header .menu_items li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+header .hamburger {
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor:pointer;
+    display: none;
+}
+
+ul.show {
+    top:65px;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/slider1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: rgb(221, 231, 255);
+    widows: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#quienes-somos .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#paciente{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#paciente .container{
+    padding: 150px 12px;
+}
+
+#paciente h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#paciente p{
+    display: none;
+}
+
+#paciente .box{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.box{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    );
 
 }
 
-a {
-    text-decoration: none;
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #quienes-somos .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #quienes-somos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #quienes-somos h2{
+        margin-top: 0px;
+    }
+
+    #quienes-somos .img-container{
+        background-image: url("media/quienes-somos.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #paciente .recuadros{
+        display: flex;
+        justify-content: center;
+    }
+
+    #paciente p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #paciente h2{
+        font-size: 4em;
+    }
+
+    #paciente h3{
+        margin-top: 0;
+    }
+
+    #paciente .box{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .box{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        );
+
+    }
+
+    #caracteristicas{
+        background-image: url("media/background-2.jpeg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .logo {
+        font-size: 30px;
+        padding-left: 35px;
+    }
+
+    header .menu_items li a {
+        font-size: 16px;
+    }
+}
+    
+@media  screen and (max-width: 600px) {
+    header .menu {
+        height: 65px;
+    }
+
+    header .hamburger {
+        display: inline-flex;
+    }
+
+    header .menu_items {
+        position: fixed;
+        width: 100vw;
+        height: calc(100%-65px);
+        background-color: rgb(42, 43, 44);
+        top: -100vh;
+        text-align: center;
+        transition: 0.4s;
+        flex-direction: column;
+    }
+
+    header .menu_items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    header .menu_items li:hover {
+    background-color: none;
+    }
+    header .menu.items li a {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    header .menu_items li a:hover {
+        color:rgb(56, 116, 165);
+    }
+    
+    header .logo {
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
 }

@@ -1,0 +1,104 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body, html {
+    height: 100vh;
+}
+
+body {
+    height: 800px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 36% auto 10%;
+    grid-template-areas: 
+           "header"
+           "foto"
+           "main"
+           "footer";
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    background-color: rgba(56, 116, 165, 0.9);
+    border-bottom: 1px solid rgb(42, 43, 44);
+    box-shadow: 5px 1px 10px rgb(56, 116, 165);
+}
+
+.foto {
+    grid-area: foto;
+}
+.contenedorDeFoto {
+    position: absolute;
+    right: 50vw;
+    transform: translate(52%, 0);
+    margin: 20px;
+    width: 75vw;
+    height: 250px;
+    overflow: hidden;
+    background-image: url(../../imagenes/hospitalrandom1.jpg);
+    background-size: cover;
+    background-color: aliceblue;
+}
+
+.divDentroFoto {
+    position: absolute;
+    right: 20px;
+    top: 125px;
+    transform: translate(0, -15%);
+    height: 75px;
+    width: 450px;
+    background-color: rgba(227, 234, 240, 0.7);
+    text-align: center;
+    line-height: 75px;
+}
+
+
+
+main {
+    grid-area: main;
+}
+
+.mainturnos {
+    display: flex;
+    justify-content: space-around;
+    top: 400px;
+    margin: 30px;
+}
+
+.ahregistrarse {
+    height: 200px;
+    width: 400px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+}
+
+.fotosturnos {
+    object-fit: cover;
+}
+
+.fotosturnos:hover {
+    transform:scale(1.1);
+    transition: 0.4s;
+    transition-timing-function: ease-out;
+    filter:saturate(40%);
+}
+
+footer {
+    grid-area: footer;
+}
+
+.resaltarletra {
+    color: rgb(56, 116, 165);
+}

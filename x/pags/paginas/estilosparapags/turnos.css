@@ -1,0 +1,52 @@
+.contenedorFotoHospital {
+    position: absolute;
+    right: 50vw;
+    transform: translate(52%, 0);
+    margin: 20px;
+    width: 75vw;
+    height: 250px;
+    overflow: hidden;
+    background-image: url(../../imagenes/hospitalrandom1.jpg);
+    background-size: cover;
+    background-color: aliceblue;
+}
+
+.divDentroFoto {
+    position: absolute;
+    right: 20px;
+    top: 125px;
+    transform: translate(0, -15%);
+    height: 75px;
+    width: 450px;
+    background-color: rgba(227, 234, 240, 0.7);
+    text-align: center;
+    line-height: 75px;
+}
+
+.divDentroFoto p {
+    font-size: larger;
+}
+
+.mainturnos {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 400px;
+}
+
+.ahregistrarse {
+    height: 200px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.fotosturnos {
+    object-fit: cover;
+}
+
+.fotosturnos:hover {
+    transform:scale(1.1);
+    transition: 0.4s;
+    transition-timing-function: ease-out;
+    filter:saturate(40%);
+}
